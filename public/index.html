@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Recipe Studio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="brand">
+            <span class="brand-icon">✦</span>
+            <span>Recipe Studio</span>
+        </div>
+
+        <div class="kitchen-status">
+            <span></span>
+            AI KITCHEN
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <div class="hero-label">
+                FROM YOUR KITCHEN
+            </div>
+
+            <h1>
+                What can we
+                <em>cook?</em>
+            </h1>
+
+            <p>
+                Tell us what's hiding in your kitchen.
+                We'll turn it into something worth sitting down for.
+            </p>
+
+        </section>
+
+
+        <section class="recipe-workspace">
+
+            <div class="ingredient-panel">
+
+                <div class="panel-heading">
+                    <span>01</span>
+                    What's in your kitchen?
+                </div>
+
+                <textarea
+                    id="ingredients"
+                    placeholder="Tomatoes, eggs, garlic, rice, spinach..."
+                ></textarea>
+
+
+                <div class="panel-heading">
+                    <span>02</span>
+                    What are you making?
+                </div>
+
+                <select id="mealType">
+
+                    <option value="">Choose a meal</option>
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                    <option>Snack</option>
+                    <option>Dessert</option>
+                    <option>Drink</option>
+
+                </select>
+
+
+                <div class="panel-heading">
+                    <span>03</span>
+                    Your preference
+                </div>
+
+                <select id="diet">
+
+                    <option value="">Choose a preference</option>
+                    <option>Anything</option>
+                    <option>Vegetarian</option>
+                    <option>Vegan</option>
+                    <option>High Protein</option>
+                    <option>Low Carb</option>
+                    <option>Gluten Free</option>
+
+                </select>
+
+
+                <div class="panel-heading">
+                    <span>04</span>
+                    Time available
+                </div>
+
+                <div class="time-options">
+
+                    <button class="time-option" data-time="15 minutes">
+                        15 min
+                    </button>
+
+                    <button class="time-option" data-time="30 minutes">
+                        30 min
+                    </button>
+
+                    <button class="time-option" data-time="45 minutes">
+                        45 min
+                    </button>
+
+                    <button class="time-option" data-time="60 minutes">
+                        60 min
+                    </button>
+
+                </div>
+
+                <input type="hidden" id="cookingTime">
+
+
+                <button id="generateBtn">
+                    Create My Recipe
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <div class="recipe-panel">
+
+                <div class="recipe-top">
+
+                    <span>YOUR RECIPE</span>
+
+                    <span id="recipeStatus">
+                        WAITING FOR INGREDIENTS
+                    </span>
+
+                </div>
+
+
+                <div id="result" class="recipe-result">
+
+                    <div class="empty-recipe">
+
+                        <div class="plate-icon">
+                            ✦
+                        </div>
+
+                        <h2>
+                            Your next meal starts here.
+                        </h2>
+
+                        <p>
+                            Add a few ingredients and let AI
+                            create something delicious.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recipe-actions">
+
+                    <button
+                        id="copyBtn"
+                        style="display:none;"
+                    >
+                        Copy Recipe
+                    </button>
+
+                    <button
+                        id="downloadBtn"
+                        style="display:none;"
+                    >
+                        Download PDF
+                    </button>
+
+                    <button
+                        id="againBtn"
+                        style="display:none;"
+                    >
+                        Create Another
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        RECIPE STUDIO · COOK WITH WHAT YOU HAVE
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
