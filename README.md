@@ -1,4 +1,3 @@
-
 # 🍳 AI Recipe Generator
 
 An elegant AI-powered recipe generator that transforms your ingredients into creative, personalized recipes in seconds.
